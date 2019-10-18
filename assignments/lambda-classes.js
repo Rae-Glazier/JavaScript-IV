@@ -32,7 +32,8 @@ class Person{
     super(attributes);
       this.previousBackground = attributes.previousBackground,
       this.className = attributes.className,
-      this.favSubjects = attributes.favSubjects
+      this.favSubjects = attributes.favSubjects,
+      this.subject = attributes.subject
     }
     listsSubjects(){
         console.log(`${this.name}'s favorite subjects are:${this.favSubjects}`)
@@ -50,13 +51,14 @@ class Person{
       super(attributes);
       this.gradClassName = attributes.gradClassName,
       this.favInstructor = attributes.favInstructor,
-      this.channel = attributes.channel
+      this.channel = attributes.channel,
+      this.subject = attributes.subject
     }
     standUp(){
       console.log(`${this.name} announces to ${this.channel}, @channel standup times!`);
     }
     debugsCode(){
-        console.log(`${this.name} debugs ${new Student}'s code on ${this.subject}`);
+        console.log(`${this.name} debugs student's code on ${this.subject}`);
     }
   }
 
@@ -76,6 +78,7 @@ class Person{
     age: 30,
     previousBackground: 'Stay-At-Home-Mom',
     className: 'Web25',
+    subject: 'JavaScript',
     favSubjects: ['HTML', 'CSS', 'JavaScript']
   });
 
@@ -85,7 +88,9 @@ class Person{
     age: 37,
     gradClassName: 'WebPT9',
     favInstructor: 'John Knell',
-    catchPhrase: `Stand up time! time to get in here`
+    catchPhrase: `Stand up time! time to get in here`,
+    channel: 'Web25-chris',
+    subject: 'JavaScript'
   });
 
 console.log(fred.demo());
@@ -93,4 +98,4 @@ console.log(fred.speak());
 console.log(rae.listsSubjects());
 console.log(rae.PRAssignment());
 console.log(chris.standUp());
-console.log(chris.debugsCode());
+console.log(chris.debugsCode(rae));
